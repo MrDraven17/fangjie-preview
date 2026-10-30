@@ -29,8 +29,6 @@ dialog{border:0;padding:12px;background:#f3f1ec;max-width:96vw;max-height:94vh}d
 .media img{color:transparent}
 .motion{position:relative;background:#e4e8e0}
 .motion video{display:block;width:100%;height:auto;aspect-ratio:var(--ratio);object-fit:contain}
-.play-motion{position:absolute;right:10px;bottom:10px;border:1px solid #155733;padding:7px 12px;background:#f3f1ec;color:#155733;font:13px/1.3 sans-serif;cursor:pointer}
-.play-motion[hidden]{display:none}
 .media-error{font:12px/1.5 sans-serif;color:#155733;border:1px solid #abb8ad;background:#f3f1ec;padding:6px 10px;cursor:pointer;margin-top:6px}
 .media-error[hidden]{display:none}
 @media(prefers-reduced-motion:no-preference){.media.reveal{animation:reveal-media .35s ease both}@keyframes reveal-media{from{transform:translateY(6px)}to{transform:translateY(0)}}}
