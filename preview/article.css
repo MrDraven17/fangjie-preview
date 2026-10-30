@@ -1,7 +1,7 @@
 
-@font-face{font-family:FJSans;src:url('../output/Document fonts/NotoSansSC-VF.woff')}
-@font-face{font-family:FJSerif;src:url('../output/Document fonts/NotoSerifSC-VF.woff')}
-@font-face{font-family:FJZhong;src:local('STZhongsong'),local('华文中宋')}
+@font-face{font-display:swap;font-family:FJSans;src:url('../output/Document fonts/NotoSansSC-VF.woff')}
+@font-face{font-display:swap;font-family:FJSerif;src:url('../output/Document fonts/NotoSerifSC-VF.woff')}
+@font-face{font-display:swap;font-family:FJZhong;src:local('STZhongsong'),local('华文中宋')}
 *{box-sizing:border-box}html{scrollbar-width:none}html::-webkit-scrollbar{display:none}
 body{margin:0;background:#f3f1ec;color:#172c26;font:16px/1.8 FJSans,'Microsoft YaHei',sans-serif}
 main{width:100%;max-width:480px;margin:auto}.section{padding:44px 24px 52px;position:relative}.sage{background:#cdd8ce}.shell{background:#f3f1ec}
@@ -22,5 +22,15 @@ table{border-collapse:collapse;width:100%;margin:28px 0 18px;font-size:13px}th,t
 #join .note{text-align:center}#join>.body:last-child{margin-top:28px}#progress{position:fixed;top:0;left:0;height:3px;background:#155733;width:0;z-index:5}
 dialog{border:0;padding:12px;background:#f3f1ec;max-width:96vw;max-height:94vh}dialog::backdrop{background:#172c26cc}dialog img{display:block;max-width:88vw;max-height:82vh;width:auto;height:auto}dialog button{border:0;background:#155733;color:white;padding:8px 16px;display:block;margin-left:auto;font:14px FJSans}
 @media(max-width:340px){.section{padding-left:22px;padding-right:22px}h1{font-size:34px}.serif{font-size:54px}.brand img{width:160px}.brand span{font-size:10px}.frame-heading{padding-left:17px}.qr{width:250px}.number{font-size:60px}td:nth-child(2),td:nth-child(3){font-size:14px}table{font-size:12px}}
-@media(prefers-reduced-motion:no-preference){.media{transition:opacity .35s ease,transform .35s ease}.media.pending{opacity:0;transform:translateY(8px)}}
+@media(prefers-reduced-motion:no-preference){.media{transition:opacity .35s ease,transform .35s ease}}
 @media print{.media.pending{opacity:1!important;transform:none!important}#progress{display:none}}
+
+.media picture{display:block;background-position:center;background-size:100% 100%;background-repeat:no-repeat}
+.media img{color:transparent}
+.motion{position:relative;background:#e4e8e0}
+.motion video{display:block;width:100%;height:auto;aspect-ratio:var(--ratio);object-fit:contain}
+.play-motion{position:absolute;right:10px;bottom:10px;border:1px solid #155733;padding:7px 12px;background:#f3f1ec;color:#155733;font:13px/1.3 sans-serif;cursor:pointer}
+.play-motion[hidden]{display:none}
+.media-error{font:12px/1.5 sans-serif;color:#155733;border:1px solid #abb8ad;background:#f3f1ec;padding:6px 10px;cursor:pointer;margin-top:6px}
+.media-error[hidden]{display:none}
+@media(prefers-reduced-motion:no-preference){.media.reveal{animation:reveal-media .35s ease both}@keyframes reveal-media{from{transform:translateY(6px)}to{transform:translateY(0)}}}
